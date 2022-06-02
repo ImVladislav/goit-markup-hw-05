@@ -127,14 +127,17 @@
         <div class="container">
         <h2 class="title_1">Чем мы занимаемся</h2>
             <ul>
-                <li>
+                <li class="all-img">
                     <img class="img1" src="images/img1.jpg" alt="img1">
+                    <p class="img-description">Десктопные приложения</p>
                 </li>
-                <li>
-                   <img class="img2" src="images/img2.jpg" alt="img2">
+                <li class="all-img">
+                   <img class="img2 " src="images/img2.jpg" alt="img2">
+                   <p class="img-description">Мобильные приложения</p>
                 </li>
-                <li>
+                <li class="all-img">
                    <img class="img3" src="images/img3.jpg" alt="img3">
+                    <p class="img-description">Дизайнерские решения</p>
                 </li>
             </ul>
          </div>  
@@ -300,7 +303,7 @@
                 </a>
             </li>
             <li>               
-                <a class="clients-logo__item">
+                <a href="*" class="clients-logo__item">
                     <svg class="logo-svg">
                         <use href="images/icons.svg#client-5"></use>
                     </svg>
@@ -362,11 +365,55 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <button data-modal-close>закрыть</button>
+            <div class="close-btn">
+                <button data-modal-close>
+                    <svg class="close-modal__icon">
+                        <use href="images/icons.svg#close" ></use>
+                    </svg>
+                </button>
+            </div>
             <h2>Оставьте свои данные, мы вам перезвоним</h2>
+            <div class="modal-menu">
+                <form name="signup_form" autocomplete="on" novalidate>
+                    <label>
+                        <p>Имя</p>
+                        <div class="form-field">
+                        <input type="name" name="name" id="user-name" />
+                        <svg class="modal_icon">
+                            <use href="images/icons.svg#person" ></use>
+                        </svg>
+                        </div>
+                    </label>
+            
+                    <label>
+                        <div class="form-field">
+                        <p>Телефон</p>
+                        <input type="phone" name="phone" id="user-phone" />
+                        </div>
+                    </label>
+
+                    <label>
+                        <div class="form-field">
+                        <p>Почта</p>
+                        <input type="email" name="email" id="user-email" />
+                        </div>
+                    </label>
+
+                    <label>
+                        <p>Коментарий</p>
+                        <textarea type="coments" name="coments" id="coments" placeholder="Введите текст">
+                        </textarea>    
+                    </label>
+                    
+                    <label class="checkbox">
+                        <input class="checkbox_origin" type="checkbox" name="" value="html" id="html">
+                        Соглашаюсь с рассылкой и принимаю <a>Условия договора</a>
+                    </label>
+            </div>
+              <button type="submit">Submit</button>
+            </form>
         </div>
     </div>
-    <button data-modal-open>открыть модалку тест</button>
 
     <script src="./js/modal.js"></script>
 </body>

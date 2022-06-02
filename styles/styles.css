@@ -34,6 +34,7 @@ general rules
     --card-set-gap: 30px;
     --hover-time: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 body {
     padding: 0;
     margin: 0;
@@ -42,7 +43,6 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--black-text);
     background-color: var(--white);
-    font-size: 14px;
 }
 span {
     display: inline-block;
@@ -469,20 +469,57 @@ footer .social-networks-footer ul{
 .team-card{
     padding: 30px 32px 30px 32px;
 }
+
+
+
+
+.all-img{
+position: relative;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+.img-description{
+    position: absolute;
+    width: 100%;
+    min-height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    top: 225px;
+}
+
+
+
+
+
 /* 3.4 index regular customer */
 .regular-customers  h2{
     text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;  
     margin-bottom: 50px;
 }
 .clients-logo{
     display: flex;
     justify-content: space-between;
 }
-.clients-logo__item:hover {
+.clients-logo__item:hover, .clients-logo__item:focus {
     border: 1px solid #2196f3;
     transition: var(--hover-time);
 } 
-.clients-logo__item:hover svg{
+.clients-logo__item:hover svg, .clients-logo__item:focus svg{
     fill: #2196f3;
     transition: var(--hover-time);
 }
@@ -686,7 +723,9 @@ a .social-networks__icon {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: aqua;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 .backdrop.is-hidden{
     opacity: 0;
@@ -694,11 +733,96 @@ a .social-networks__icon {
 }
 
 .modal{
-    min-height: 500px;
-    min-width: 500px;
-    background-color: #2196F3;
+    min-height: 528px;
+    min-width: 581px;
+    background-color: var(--white);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+}
+
+.close-btn{
+    display: flex;
+    padding: 8px 8px 2px 8px;
+}
+.modal button{
+    margin-left: auto;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--white);
+}
+.close-modal__icon:hover{
+fill: var(--blue);
+}
+.close-modal__icon{
+    width: 30px;
+    height: 30px;
+    padding: auto;
+    justify-content: center;
+    display: flex; 
+    padding: 5px;
+    background-color: var(--white);
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal h2{
+    display: flex;
+    justify-content: center;
+}
+.modal-menu{
+    margin: 12px 39px 30px 41px;
+
+}
+label p{
+    margin-bottom: 4px;
+}
+input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+}
+input:focus-visible{
+    border: var(--blue);
+    color: #2196F3;
+    cursor: pointer;
+
+}
+.modal-menu textarea{
+    width: 100%;
+    height: 120;
+}
+.form-field{
+    position: relative;
+}
+.modal_icon{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 15px;
+    top: 10px;
+    /* height: 100%;
+    transform: translateX(-50%); */
+}
+.modal_icon:focus-visible{
+    fill: currentColor;
+}
+
+input:focus-visible + .modal_icon{
+    fill: #2196f3;
+}
+.checkbox_origin{
+    appearance: none;
+}
+.checkboxl::before{
+    content:'';
+    width: 20px;
+    height: 20px;
+    background-color: #757575;
 }
