@@ -267,45 +267,45 @@
         <div class="container">
             <h2>Постоянные клиенты</h2>
             <ul class="clients-logo">
-            <li>
-                <a href="*" class="clients-logo__item">
-                    <svg class="logo-svg">
-                        <use href="images/icons.svg#icon-client-1"></use>
-                    </svg>
-                </a>
-            </li>
-            <li>                
+            <li class="customer-item">
                 <a href="*" class="clients-logo__item">
                     <svg class="logo-svg">
                         <use href="images/icons.svg#client-1"></use>
                     </svg>
                 </a>
             </li>
-            <li>               
+            <li class="customer-item">                
                 <a href="*" class="clients-logo__item">
                     <svg class="logo-svg">
                         <use href="images/icons.svg#client-2"></use>
                     </svg>
                 </a>
             </li>
-            <li>               
+            <li class="customer-item">               
                 <a href="*" class="clients-logo__item">
                     <svg class="logo-svg">
                         <use href="images/icons.svg#client-3"></use>
                     </svg>
                 </a>
             </li>
-            <li>               
+            <li class="customer-item">               
                 <a href="*" class="clients-logo__item">
                     <svg class="logo-svg">
-                        <use href="images/icons.svg#client-4" ></use>
+                        <use href="images/icons.svg#client-4"></use>
                     </svg>
                 </a>
             </li>
-            <li>               
+            <li class="customer-item">               
                 <a href="*" class="clients-logo__item">
                     <svg class="logo-svg">
-                        <use href="images/icons.svg#client-5"></use>
+                        <use href="images/icons.svg#client-5" ></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="customer-item">               
+                <a href="*" class="clients-logo__item">
+                    <svg class="logo-svg">
+                        <use href="images/icons.svg#client-6"></use>
                     </svg>
                 </a>
             </li>
@@ -316,40 +316,43 @@
 
 </main>
 <footer>
+
     <div class="container">
-        <address>
-   <a class="bottom_logo" href="">Web<span>Studio</span></a>
-    <ul>
-        <li><a href="google_maps">г. <span>Киев, пр-т Леси Украинки, 26</span></a></li>
-        <li><a href="mailto:info@example.com">info@example.com</a></li>
-        <li><a href="+380991111111">+38 099 111 11 11</a></li>
-    </ul>
-    </address>
+        <div>
+        <a class="bottom_logo" href="">Web<span>Studio</span></a>
+            <address>
+                <ul>
+                    <li><a href="google_maps">г. <span>Киев, пр-т Леси Украинки, 26</span></a></li>
+                    <li><a href="mailto:info@example.com">info@example.com</a></li>
+                    <li><a href="+380991111111">+38 099 111 11 11</a></li>
+                </ul>
+            </address>
+        </div>
         <div class="social-networks-footer">
             <p>Присоединяйтесь</p>
             <ul>
-                <li>
-                    <a href="https:instagram.com">
+                <li class="social-networks-item">
+                    <a  href="https:instagram.com">
                         <svg class="social-networks__icon">
                             <use href="images/icons.svg#instagram" width="20px" height="20px" ></use>
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="social-networks-item">
                     <a href="https://twitter.com">
                          <svg class="social-networks__icon">
-                            <use href="images/icons.svg#twitter" width="25px" height="25px"></use>
+                            <use href="images/icons.svg#twitter" width="20px" height="20px"></use>
                          </svg>
                      </a>
                  </li>
-                 <li>
+                 <li class="social-networks-item">
                     <a href="https://facebook.com">   
                         <svg class="social-networks__icon">
                             <use href="images/icons.svg#facebook" width="20px" height="20px"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="social-networks-item">
                      <a href="https://linkedin.com">
                         <svg class="social-networks__icon">
                             <use href="images/icons.svg#linkedin" width="20px" height="20px"></use>
@@ -365,20 +368,20 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <div class="close-btn">
-                <button data-modal-close>
+            <!-- <div class="close-btn"> -->
+                <button class="close-btn" data-modal-close>
                     <svg class="close-modal__icon">
                         <use href="images/icons.svg#close" ></use>
                     </svg>
                 </button>
-            </div>
+            <!-- </div> -->
             <h2>Оставьте свои данные, мы вам перезвоним</h2>
             <div class="modal-menu">
                 <form name="signup_form" autocomplete="on" novalidate>
                     <label>
-                        <p>Имя</p>
                         <div class="form-field">
-                        <input type="name" name="name" id="user-name" />
+                        Имя
+                        <input class="input-area" type="name" name="name" id="user-name" />
                         <svg class="modal_icon">
                             <use href="images/icons.svg#person" ></use>
                         </svg>
@@ -387,30 +390,49 @@
             
                     <label>
                         <div class="form-field">
-                        <p>Телефон</p>
-                        <input type="phone" name="phone" id="user-phone" />
+                        Телефон
+                        <input class="input-area" type="phone" name="phone" id="user-phone" />
+                        <svg class="modal_icon">
+                            <use href="images/icons.svg#phone-1" ></use>
+                        </svg>
                         </div>
                     </label>
 
                     <label>
                         <div class="form-field">
-                        <p>Почта</p>
-                        <input type="email" name="email" id="user-email" />
+                        Почта
+                        <input class="input-area" type="email" name="email" id="user-email" />
+                        <svg class="modal_icon">
+                            <use href="images/icons.svg#e-mail" ></use>
+                        </svg>
                         </div>
                     </label>
 
                     <label>
-                        <p>Коментарий</p>
-                        <textarea type="coments" name="coments" id="coments" placeholder="Введите текст">
-                        </textarea>    
+                        <div class="form-field">
+                        Коментарий
+                        <textarea class="coments" type="coments" name="coments" id="coments" placeholder="Введите текст">
+                        </textarea> 
+                    </div>   
                     </label>
                     
                     <label class="checkbox">
+                        <span class="checkbox-bg">
+                            <svg class="checkbox-vector">
+                                <use href="images/icons.svg#check" ></use>
+                            </svg>
+                        </span>
                         <input class="checkbox_origin" type="checkbox" name="" value="html" id="html">
                         Соглашаюсь с рассылкой и принимаю <a>Условия договора</a>
+                        <span class="checkbox-bg">
+                            <svg class="checkbox-vector">
+                                <use href="images/icons.svg#check" ></use>
+                            </svg>
+                        </span>
                     </label>
             </div>
-              <button type="submit">Submit</button>
+            
+              <button class="modal-btn-send" type="submit">Отправить</button>
             </form>
         </div>
     </div>
